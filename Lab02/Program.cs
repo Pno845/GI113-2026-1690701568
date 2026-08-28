@@ -1,4 +1,12 @@
-﻿namespace Lab02
+﻿/*
+ * Student ID : 1690701568
+ * Name       : Sattarin Saelao
+ * Section    : 129B
+ * No.        :
+ * Course     : GI113 Computer Programming (GI)
+ */
+
+namespace Lab02
 {
     internal class Program
     {
@@ -43,6 +51,7 @@
             // ทำซ้ำแบบนี้ให้ครบ 4 ตัวละคร ตัวละ 5 stat
 
             //Part B Lab02
+
         }
     }
 }

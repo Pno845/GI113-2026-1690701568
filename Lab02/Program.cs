@@ -43,6 +43,7 @@ namespace Lab02
             Console.WriteLine($"HP: {currentHp} / {maxHp}");
             hpPercent = currentHp * 100 / maxHp;
             Console.WriteLine($"Hp Percentage: {hpPercent}");
+            Console.WriteLine();
 
             // โครงพิมพ์ผล 1 ตัวละคร (ปรับ label ตามธีมของตัวเอง)
             // Console.WriteLine($"Name: {name}");
@@ -51,7 +52,81 @@ namespace Lab02
             // ทำซ้ำแบบนี้ให้ครบ 4 ตัวละคร ตัวละ 5 stat
 
             //Part B Lab02
+            Console.WriteLine("===== CHARACTER STATUS: INITIAL =====");
+            string characterName1 = "Archer";
+            string characterClass1 = "Ranger";
+            int speeed1 = 20;
+            int maxHp1 = 120;
+            int defense1 = 10;
+            int currentHp1 = 120;
+            float attackPower1 = 30.0f;
+            double critMultiplier1 = 2.0;
+            int critChance1 = 40;
+            Console.WriteLine($"Name: {characterName1}");
+            Console.WriteLine($"Class: {characterClass1}");
+            Console.WriteLine($"HP: {currentHp1} / {maxHp1}");
+            Console.WriteLine($"Defense: {defense1}");
+            Console.WriteLine($"Attack Power: {attackPower1}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplier1}");
+            Console.WriteLine($"Speed: {speeed1}");
+            Console.WriteLine($"Critical Rate: {critChance1}%");
+            Console.WriteLine();
 
+            string characterName2 = "Gregor";
+            string characterClass2 = "Tanker";
+            int speeed2 = 10;
+            int maxHp2 = 250;
+            int currentHp2 = 230;
+            int defense2 = 25;
+            float attackPower2 = 17.5f;
+            double critMultiplier2 = 1.35;
+            int critChance2 = 15;
+            Console.WriteLine($"Name: {characterName2}");
+            Console.WriteLine($"Class: {characterClass2}");
+            Console.WriteLine($"HP: {currentHp2} / {maxHp2}");
+            Console.WriteLine($"Defense: {defense2}");
+            Console.WriteLine($"Attack Power: {attackPower2}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplier2}");
+            Console.WriteLine($"Speed: {speeed2}");
+            Console.WriteLine($"Critical Rate: {critChance2}%");
+            Console.WriteLine();
+
+            string characterName3 = "Kali";
+            string characterClass3 = "Witch";
+            int speeed3 = 14;
+            int maxHp3 = 150;
+            int currentHp3 = 150;
+            int defense3 = 12;
+            float attackPower3 = 45.0f;
+            double critMultiplier3 = 1.4;
+            int critChance3 = 25;
+            Console.WriteLine($"Name: {characterName3}");
+            Console.WriteLine($"Class: {characterClass3}");
+            Console.WriteLine($"HP: {currentHp3} / {maxHp3}");
+            Console.WriteLine($"Defense: {defense3}");
+            Console.WriteLine($"Attack Power: {attackPower3}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplier3}");
+            Console.WriteLine($"Speed: {speeed3}");
+            Console.WriteLine($"Critical Rate: {critChance3}%");
+            Console.WriteLine();
+
+            string characterName4 = "Luna";
+            string characterClass4 = "Healer";
+            int speeed4 = 12;
+            int maxHp4 = 180;
+            int currentHp4 = 180;
+            int defense4 = 15;
+            float attackPower4 = 15.0f;
+            double critMultiplier4 = 1.2;
+            int critChance4 = 15;
+            Console.WriteLine($"Name: {characterName4}");
+            Console.WriteLine($"Class: {characterClass4}");
+            Console.WriteLine($"HP: {currentHp4} / {maxHp4}");
+            Console.WriteLine($"Defense: {defense4}");
+            Console.WriteLine($"Attack Power: {attackPower4}");
+            Console.WriteLine($"Critical Multiplier: {critMultiplier4}");
+            Console.WriteLine($"Speed: {speeed4}");
+            Console.WriteLine($"Critical Rate: {critChance4}%");
         }
     }
 }

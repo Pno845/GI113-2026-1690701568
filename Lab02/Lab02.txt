@@ -1,0 +1,7 @@
+﻿Build started at 19:17...
+1>------ Build started: Project: Lab02, Configuration: Debug Any CPU ------
+1>  Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>C:\GI113_Sattarin\GI113-2026-1690701568\Lab02\Program.cs(18,17,18,22): warning CS0219: The variable 'level' is assigned but its value is never used
+1>  Lab02 -> C:\GI113_Sattarin\GI113-2026-1690701568\Lab02\bin\Debug\net10.0\Lab02.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 19:17 and took 00.538 seconds ==========

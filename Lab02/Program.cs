@@ -62,6 +62,7 @@ namespace Lab02
             float attackPower1 = 30.0f;
             double critMultiplier1 = 2.0;
             int critChance1 = 40;
+            bool isAlive1 = true;
             Console.WriteLine($"Name: {characterName1}");
             Console.WriteLine($"Class: {characterClass1}");
             Console.WriteLine($"HP: {currentHp1} / {maxHp1}");
@@ -70,6 +71,7 @@ namespace Lab02
             Console.WriteLine($"Critical Multiplier: {critMultiplier1}");
             Console.WriteLine($"Speed: {speeed1}");
             Console.WriteLine($"Critical Rate: {critChance1}%");
+            Console.WriteLine($"Is Alive: {isAlive1}");
             Console.WriteLine();
 
             string characterName2 = "Gregor";
@@ -81,6 +83,7 @@ namespace Lab02
             float attackPower2 = 17.5f;
             double critMultiplier2 = 1.35;
             int critChance2 = 15;
+            bool isAlive2 = true;
             Console.WriteLine($"Name: {characterName2}");
             Console.WriteLine($"Class: {characterClass2}");
             Console.WriteLine($"HP: {currentHp2} / {maxHp2}");
@@ -89,6 +92,7 @@ namespace Lab02
             Console.WriteLine($"Critical Multiplier: {critMultiplier2}");
             Console.WriteLine($"Speed: {speeed2}");
             Console.WriteLine($"Critical Rate: {critChance2}%");
+            Console.WriteLine($"Is Alive: {isAlive2}");
             Console.WriteLine();
 
             string characterName3 = "Kali";
@@ -100,6 +104,7 @@ namespace Lab02
             float attackPower3 = 45.0f;
             double critMultiplier3 = 1.4;
             int critChance3 = 25;
+            bool isAlive3 = true;
             Console.WriteLine($"Name: {characterName3}");
             Console.WriteLine($"Class: {characterClass3}");
             Console.WriteLine($"HP: {currentHp3} / {maxHp3}");
@@ -108,6 +113,7 @@ namespace Lab02
             Console.WriteLine($"Critical Multiplier: {critMultiplier3}");
             Console.WriteLine($"Speed: {speeed3}");
             Console.WriteLine($"Critical Rate: {critChance3}%");
+            Console.WriteLine($"Is Alive: {isAlive3}");
             Console.WriteLine();
 
             string characterName4 = "Luna";
@@ -119,6 +125,7 @@ namespace Lab02
             float attackPower4 = 15.0f;
             double critMultiplier4 = 1.2;
             int critChance4 = 15;
+            bool isAlive4 = true;
             Console.WriteLine($"Name: {characterName4}");
             Console.WriteLine($"Class: {characterClass4}");
             Console.WriteLine($"HP: {currentHp4} / {maxHp4}");
@@ -127,6 +134,7 @@ namespace Lab02
             Console.WriteLine($"Critical Multiplier: {critMultiplier4}");
             Console.WriteLine($"Speed: {speeed4}");
             Console.WriteLine($"Critical Rate: {critChance4}%");
+            Console.WriteLine($"Is Alive: {isAlive4}");
         }
     }
 }

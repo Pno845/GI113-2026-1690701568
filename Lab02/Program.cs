@@ -55,6 +55,7 @@ namespace Lab02
             Console.WriteLine("===== CHARACTER STATUS: INITIAL =====");
             string characterName1 = "Archer";
             string characterClass1 = "Ranger";
+            char rank1 = 'A';
             int speeed1 = 20;
             int maxHp1 = 120;
             int defense1 = 10;
@@ -65,6 +66,7 @@ namespace Lab02
             bool isAlive1 = true;
             Console.WriteLine($"Name: {characterName1}");
             Console.WriteLine($"Class: {characterClass1}");
+            Console.WriteLine($"Rank: {rank1}");
             Console.WriteLine($"HP: {currentHp1} / {maxHp1}");
             Console.WriteLine($"Defense: {defense1}");
             Console.WriteLine($"Attack Power: {attackPower1}");
@@ -76,6 +78,7 @@ namespace Lab02
 
             string characterName2 = "Gregor";
             string characterClass2 = "Tanker";
+            char rank2 = 'B';
             int speeed2 = 10;
             int maxHp2 = 250;
             int currentHp2 = 230;
@@ -86,6 +89,7 @@ namespace Lab02
             bool isAlive2 = true;
             Console.WriteLine($"Name: {characterName2}");
             Console.WriteLine($"Class: {characterClass2}");
+            Console.WriteLine($"Rank: {rank2}");
             Console.WriteLine($"HP: {currentHp2} / {maxHp2}");
             Console.WriteLine($"Defense: {defense2}");
             Console.WriteLine($"Attack Power: {attackPower2}");
@@ -97,6 +101,7 @@ namespace Lab02
 
             string characterName3 = "Kali";
             string characterClass3 = "Witch";
+            char rank3 = 'A';
             int speeed3 = 14;
             int maxHp3 = 150;
             int currentHp3 = 150;
@@ -107,6 +112,7 @@ namespace Lab02
             bool isAlive3 = true;
             Console.WriteLine($"Name: {characterName3}");
             Console.WriteLine($"Class: {characterClass3}");
+            Console.WriteLine($"Rank: {rank3}");
             Console.WriteLine($"HP: {currentHp3} / {maxHp3}");
             Console.WriteLine($"Defense: {defense3}");
             Console.WriteLine($"Attack Power: {attackPower3}");
@@ -118,6 +124,7 @@ namespace Lab02
 
             string characterName4 = "Luna";
             string characterClass4 = "Healer";
+            char rank4 = 'S';
             int speeed4 = 12;
             int maxHp4 = 180;
             int currentHp4 = 180;
@@ -128,6 +135,7 @@ namespace Lab02
             bool isAlive4 = true;
             Console.WriteLine($"Name: {characterName4}");
             Console.WriteLine($"Class: {characterClass4}");
+            Console.WriteLine($"Rank: {rank4}");
             Console.WriteLine($"HP: {currentHp4} / {maxHp4}");
             Console.WriteLine($"Defense: {defense4}");
             Console.WriteLine($"Attack Power: {attackPower4}");

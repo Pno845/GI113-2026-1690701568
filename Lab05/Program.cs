@@ -49,7 +49,7 @@
 
             Random randomCrit = new Random();
             int rollchance = randomCrit.Next(1, 101); // สุ่มตัวเลข 1-100 หรือค่าอื่นๆต้ิง +1
-            bool isCrit = rollchance <= 10; //10% chance to crit   
+            bool isCrit = rollchance <= 30; //30% chance to crit   
             int CritDamage = normalDamage + Convert.ToInt32(isCrit) * normalDamage; // ได้ค่า 1 หรือ 0 เป็นตัวกําหนดว่าจะได้รับ Crit Damage หรือไม่
             Console.WriteLine($"Critical Damage roll:{rollchance} (Critical?: {isCrit})");
             Console.WriteLine($"If critical, normal attack would deal: {CritDamage} DMG");

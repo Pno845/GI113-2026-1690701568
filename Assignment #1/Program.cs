@@ -19,90 +19,79 @@ namespace Assignment1
                 "█     █ █ █ █ ████  █   █  ███     █     █   █ █ █ █ ████  █████ █ █ █   █   \r\n" +
                 "█     █ █   █ █   █ █   █     █    █     █   █ █   █ █     █   █ █  ██   █   \r\n" +
                 "█████ █ █   █ ████   ███  ████      ███   ███  █   █ █     █   █ █   █   █   \r\n" +
-                "============================================================================ \r\n" + 
+                "============================================================================ \r\n" +
                 "";
 
-            var sinnerName = "Yi Sang";     
-            var sinnerTier = 'O';         
-            int sinnerLevel = 65;
-            float defense = 61.5f;
-            double attack = 52.2; 
-            bool isPlayable = true;
+            var sinnerName = "Yi Sang";
+            var sinnerTier = 'O';
+            int sinnerHp = 109;
+            int sinnerSpeed = 5;
+            int sinnerLevel = 15;
+            float defense = 13.2f;
+            double attack = 15.4;
+            bool isBackup = true;
+            double slashResistance = 2;
+            double pieceResistance = 0.5;
+            double bluntResistance = 1;
 
             Console.WriteLine($"{GameTitle}");
-            Console.WriteLine($"                                                    ████████████                                                   \r\n" +
-                $"                                                ███████████████████                                                \r\n" +
-                $"                                              ████████       █████████                                             \r\n" +
-                $"                                             █████                █████                                            \r\n" +
-                $"                                            ████                    ████                                           \r\n" +
-                $"                                            ███                      ███                                           \r\n" +
-                $"                                           ████                       ██                                           \r\n" +
-                $"                                           ███       ███             ████                                          \r\n" +
-                $"                                           ███       ███     █████   ████                                          \r\n" +
-                $"                                           ████      █ █████ ██████  ███                                           \r\n" +
-                $"                                            ███████ ███████████████ ████                                           \r\n" +
-                $"                                             ██████████████████████████                                            \r\n" +
-                $"                                              ███████████     ████████                                             \r\n" +
-                $"                                                █████ ██       ██████                                              \r\n" +
-                $"                                                  ████████████ ███                                                 \r\n" +
-                $"                                               ██████████████████                                                  \r\n" +
-                $"                                             ██████ █ █████ ███████                                                \r\n" +
-                $"                                            █████ █ █ ████  █  ████                                                \r\n" +
-                $"                                            ███        ███  ██   ███                                               \r\n" +
-                $"                                            ██    █ █   ██  ██   ███                                               \r\n" +
-                $"                                            ██   ███      █ ██    ███                                              \r\n" +
-                $"                                            ██   █ █             ████                                              \r\n" +
-                $"                                           ███   █ █ ██          ████                                              \r\n" +
-                $"                                           ██   █ █ ███████      ██████                                            \r\n" +
-                $"                                          ███   █ █ ████████████████████                                           \r\n" +
-                $"                                         ███    █ ███   ████████████████                                           \r\n" +
-                $"                                        ████    █ ██████████████████ ███                                           \r\n" +
-                $"                                      █████       █   ██████  ██████████                                           \r\n" +
-                $"                                     ████              █          █████                                            \r\n" +
-                $"                                   █████                         ██████                                            \r\n" +
-                $"                                 ██████                          █ █ ██                                            \r\n" +
-                $"                               ██████    ███                         ██                                            \r\n" +
-                $"                              █████      ███ █   █                   ██                                            \r\n" +
-                $"                            █████       ████     █         █     █ █ ██                                            \r\n" +
-                $"                            ████       ████    █ █         █     █   ██                                            \r\n" +
-                $"                            ███████   █████    █ █         █     ██  ███                                           \r\n" +
-                $"                              ██████████ ██    ███                   ███                                           \r\n" +
-                $"                                  █████████     █                  █ ███                                           \r\n" +
-                $"                                        ██    █ ████               █  ██                                           \r\n" +
-                $"                                        ███   █  ███            ████████                                           \r\n" +
-                $"                                        ████  █  ███            ████████                                           \r\n" +
-                $"                                         █████  █ █            ███  ████                                           \r\n" +
-                $"                                          ███████ █           ████  ████                                           \r\n" +
-                $"                                            ███████          ████   ███                                            \r\n" +
-                $"                                               ████         ████                                                   \r\n" +
-                $"                                                 ███       ████                                                    \r\n" +
-                $"                                                 ███      ████                                                     \r\n" +
-                $"                                                 ███     ████                                                      \r\n" +
-                $"                                                ████     ███                                                       \r\n" +
-                $"                                                ███      ███                                                       \r\n" +
-                $"                                                ███       ██                                                       \r\n" +
-                $"                                                ████      ██                                                       \r\n" +
-                $"                                                 ████ ██████                                                       \r\n" +
-                $"                                                  ███ █   ███                                                      \r\n" +
-                $"                                                  ███ ███ ███                                                      \r\n" +
-                $"                                                   ██████████                                                      \r\n" +
-                $"                                                                                                                   \r\n");
+            Console.WriteLine(
+                $"                                                            \r\n" +
+                $"                          =%@@@@#*.                         \r\n" +
+                $"                        *@%@%%%%%%@#.                       \r\n" +
+                $"                       =@%%%%#%%%#%%@                       \r\n" +
+                $"                       *@@%%#%%%%%%@*:                      \r\n" +
+                $"                       =@@%@-%=@#=%@#                       \r\n" +
+                $"                        -=%==-..--*#                        \r\n" +
+                $"                          ::......=                         \r\n" +
+                $"                          :%+%%#                            \r\n" +
+                $"                       .%%*#%=*%%@:                         \r\n" +
+                $"                       -%%%%@#*#%%#                         \r\n" +
+                $"                       +%%*%@%##%%#.                        \r\n" +
+                $"                       %%##%%%%#%@#=                        \r\n" +
+                $"                      =%%##-.:%%.+:++                       \r\n" +
+                $"                     =%%@%%@#%%@@=-+-                       \r\n" +
+                $"                    #%%@%%%%%%%%@%%@:                       \r\n" +
+                $"                  *%%%@@%#%%%%%@@%%%=                       \r\n" +
+                $"                =#%%##*%%#%%%%#@@@%%=                       \r\n" +
+                $"               #%%### %%%#@%%%#@@@%#+                       \r\n" +
+                $"                 .=# :#%##@%%%#@@@%%#                       \r\n" +
+                $"                     +%%*%%%%%%@@@%%%                       \r\n" +
+                $"                      ##*#*%%@%@@%  %                       \r\n" +
+                $"                       :#*#%%%%@@=  +                       \r\n" +
+                $"                         .#%%%%@:                           \r\n" +
+                $"                          *%%@@.                            \r\n" +
+                $"                          %%@@#                             \r\n" +
+                $"                         =@%@@#                             \r\n" +
+                $"                          -%%@@                             \r\n" +
+                $"                           @##@                             \r\n" +
+                $"                            ...                             \r\n");
 
-            Console.WriteLine($"Hero Name : {sinnerName}");
-            Console.WriteLine($"Tier      : {sinnerTier}");
-            Console.WriteLine($"Level     : {sinnerLevel}");
-            Console.WriteLine($"Defense   : {defense}");
-            Console.WriteLine($"Attack    : {attack}");
-            Console.WriteLine($"Playable  : {isPlayable}");
-            Console.WriteLine();
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine($"|   Sinner    : {sinnerName}         |"); 
+            Console.WriteLine($"|   Tier      : {sinnerTier}               |");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine($"|          ==Stats==            |");
+            Console.WriteLine($"|   Level     : {sinnerLevel}              |");
+            Console.WriteLine($"|   HP        : {sinnerHp}             |");
+            Console.WriteLine($"|   Speed     : {sinnerSpeed}               |");
+            Console.WriteLine($"|   Defense   : {defense}            |");
+            Console.WriteLine($"|   Attack    : {attack}            |");
+            Console.WriteLine($"|   Backup    : {isBackup}            |");
+            Console.WriteLine("---------------------------------");
+            Console.WriteLine($"|        ==Resistance==         |");
+            Console.WriteLine($"|   Slash Resistance : (x{slashResistance})     |");
+            Console.WriteLine($"|   Piece Resistance : (x{pieceResistance})   |");
+            Console.WriteLine($"|   Blunt Resistance : (x{bluntResistance})     |");
 
+            Console.WriteLine("---------------------------------");
             double sinnerLevelAsDouble = sinnerLevel;
-            Console.WriteLine($"Level as double (implicit): {sinnerLevelAsDouble}");
-
+            Console.WriteLine($"|   Level : {sinnerLevelAsDouble}                  |");
             int defensePower = (int)defense;               
             int attackPower = Convert.ToInt32(attack);      
-            Console.WriteLine($"Defense cast (truncates)  : {defensePower}");
-            Console.WriteLine($"Attack Convert (rounds)  : {attackPower}");
+            Console.WriteLine($"|   Defense Skill  : {defensePower}         |");
+            Console.WriteLine($"|   Attack Skill   : {attackPower}         |");
+            Console.WriteLine("---------------------------------");
         }
     }
 }

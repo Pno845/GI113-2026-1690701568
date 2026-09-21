@@ -79,7 +79,7 @@ namespace Lab06
                 }
                 else if (choice == 2)
                 {
-                    Console.WriteLine("Yi sang skip the encounter and continue your MirrorDungeon.");
+                    Console.WriteLine("Yi sang skip the encounter and continue MirrorDungeon.");
                 }
                 else
                 {
@@ -92,7 +92,7 @@ namespace Lab06
                 Console.WriteLine("Lei heng HP: " + leiHengHP);
                 Console.WriteLine("Lei heng ATK: " + leiHengATK);
                 Console.WriteLine("----------------------------");
-                Console.Write("You have to Clash with Lei heng (ClashPower 12) [5-15]: ");
+                Console.Write("Yi sang have to Clash with Lei heng (ClashPower 12) [5-15]: ");
                 bool inputValid = int.TryParse(Console.ReadLine(), out int clash);
                 if (!inputValid || clash < 5 || clash > 15)
                 {

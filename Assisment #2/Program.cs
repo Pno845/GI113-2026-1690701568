@@ -48,7 +48,7 @@ namespace Assisment2
             {
                 Console.Write("How much would you like: ");
                 bool inNumber = int.TryParse(Console.ReadLine(), out int amount);
-                if (inNumber || amount > 0 && amount <= 100)
+                if (!inNumber || amount > 0 && amount <= 100)
                 {
                     Console.Write($"{amount * smeltRate} Gold Bar");
                 }
@@ -61,7 +61,7 @@ namespace Assisment2
             {
                 Console.Write("How much would you like: ");
                 bool inNumber = int.TryParse(Console.ReadLine(), out int amount);
-                if (inNumber || amount > 0 && amount <= 100)
+                if (!inNumber || amount > 0 && amount <= 100)
                 {
                     Console.Write($"{amount / salvageRate} Gold Ore");
                 }

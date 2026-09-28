@@ -1,4 +1,12 @@
-﻿using System.Collections;
+﻿/*
+* Student ID : 1690701568
+* Name       : Sattarin Saelao
+* Section    : 129B
+* No.        : 26
+* Course     : GI113 Computer Programming (GI)
+*/
+
+using System.Collections;
 
 namespace Lab03
 {

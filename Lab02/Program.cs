@@ -2,7 +2,7 @@
  * Student ID : 1690701568
  * Name       : Sattarin Saelao
  * Section    : 129B
- * No.        :
+ * No.        : 26
  * Course     : GI113 Computer Programming (GI)
  */
 

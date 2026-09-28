@@ -1,4 +1,12 @@
-﻿namespace Lab05
+﻿/*
+* Student ID : 1690701568
+* Name       : Sattarin Saelao
+* Section    : 129B
+* No.        : 26
+* Course     : GI113 Computer Programming (GI)
+*/
+
+namespace Lab05
 {
     internal class Program
     {

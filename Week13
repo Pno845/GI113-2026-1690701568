@@ -1,0 +1,52 @@
+using UnityEditor.Tilemaps;
+using UnityEngine;
+
+public class week13 : MonoBehaviour
+{
+    [SerializeField] float fallLimit = -6f;
+    Vector3 startPosition;
+    public int result = 0;
+    public string studentid = "1690701568";
+    public int studentNum = 1;
+    public string studentName = "Ice";
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void PrintStudentInfo(string id, int number, string name)
+    {
+        Debug.Log($"Student Id {id} got grade A!");
+        Debug.Log($"No: {number} Name: {name}");
+    }
+
+    void Jump()
+    {
+        Debug.Log("JUMP!!");
+    }
+
+    void AddFive(int x)
+    {
+        result = 5 + x;
+    }
+
+    void AddFiveNormal(int x)
+    {
+        result = 5 + x;
+    }
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        //with return
+        Debug.Log(AddFive(3)); // 5 + x => 5 + 3 = 8
+        //without return
+        AddFiveNormal(3);
+        Debug.Log(result);
+
+        PrintStudentInfo(studentid, studentNum, studentName);  
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

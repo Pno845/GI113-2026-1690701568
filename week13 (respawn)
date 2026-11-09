@@ -1,0 +1,151 @@
+using TMPro;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class PlayerController : MonoBehaviour
+{
+    [SerializeField] string playerName = "Alien";
+
+    [Range(1, 10)]
+    [SerializeField] float moveSpeed = 5.5f;
+    public float jumpForce = 7.5f;
+
+    int totalCoin = 9;
+    int coin;
+    bool isGrounded = true;
+
+    Rigidbody2D rb;
+    SpriteRenderer sprites;
+    Vector2 move;
+    string bar;
+
+    public TMP_Text coinText;
+    public TMP_Text debugText;
+
+    //week13
+    [SerializeField] float fallLimit = -6f;
+    UnityEngine.Vector3 startPosition;
+    public AudioClip jumpSound;
+    public AudioClip coinSound;
+    public AudioClip resetSound;
+    public AudioClip winSound;
+    public AudioClip walkSound;
+    AudioSource audioSource;
+
+    void UpdateCoinText()
+    {
+        coinText.text = $"Coins: {coin}/{totalCoin}";
+        if (coin == totalCoin)
+        {
+            coinText.text = "ALL COINS COLLECTED!!";
+            PlaySound(winSound, 2);
+        }
+    }
+
+    void Respawn()
+    {
+        if (transform.position.y < fallLimit)
+        {
+            transform.position = startPosition;
+            rb.linearVelocity = Vector2.zero;
+            Debug.Log("Fell of the world! back to the start.");
+            PlaySound(resetSound, 1);
+        }
+    }
+    
+    void PlaySound(AudioClip clip, float volume)
+    {
+        audioSource.PlayOneShot(clip, volume);
+    }
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+
+        rb = GetComponent<Rigidbody2D>();
+        sprites = GetComponent<SpriteRenderer>();
+
+        //week13
+        startPosition = transform.position;
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (transform.position.y < fallLimit)
+        {
+            Respawn();
+        }
+
+        bar = "";
+        for (int i = 0; i < totalCoin; i++)
+        {
+            if (i < coin)
+            {
+                bar += "#";
+            }
+            else
+            {
+                bar += "-";
+            }
+        }
+
+        debugText.text = $"Position: {transform.position.x.ToString("F2")}, {transform.position.y.ToString("F2")}" +
+            $"\nCoins: {bar}";
+
+        move = InputSystem.actions.FindAction("Move").ReadValue<Vector2>();
+
+        //jump logic
+        if (InputSystem.actions.FindAction("Jump").WasPressedThisFrame() && isGrounded)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            PlaySound(jumpSound, 1);
+        }
+
+        if (move.x > 0.1f)
+        {
+            sprites.flipX = false;
+        }
+        else if (move.x < -0.1f)
+        {
+            sprites.flipX = true;
+        }
+    }
+
+    // 50Hz Move +1 หรือ -1 //400fps
+    void FixedUpdate()
+    {
+        rb.linearVelocity = new Vector2(move.x * moveSpeed, rb.linearVelocity.y); // Vector x, y
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Coin"))
+        {
+            //week13
+            PlaySound(coinSound, 1);
+
+            coin++;
+            Debug.LogWarning($"Coin collected! Total: {coin}"); //Console
+
+            UpdateCoinText();
+         
+            Destroy(other.gameObject);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.GetContact(0).normal.y > 0.1f)
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
+    }
+
+}

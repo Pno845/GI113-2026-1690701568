@@ -1,10 +1,58 @@
-﻿namespace Lab11
+﻿using UnityEngine;
+
+public class Loop : MonoBehaviour
 {
-    internal class Program
+    [SerializeField] int[] numbers = { -5, -2, -9, };
+    int sum;
+    float average;
+    int maximum;
+    int minimum;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        static void Main(string[] args)
+        for (int i = 0; i < numbers.Length; i++)
         {
-            Console.WriteLine("Hello, World!");
+            Debug.Log("Number " + (i + 1) + ": " + numbers[i]);
         }
+
+        sum = 0;
+        for (int i = 0; i < numbers.Length; i++)
+        {
+            sum += numbers[i];
+        }
+        average = (float)sum / numbers.Length;
+        Debug.Log("Sum: " + sum);
+        Debug.Log("Average: " + average);
+
+        maximum = numbers[0];
+        minimum = numbers[0];
+        for (int i = 1; i < numbers.Length; i++)
+        {
+            if (numbers[i] > maximum)
+            {
+                maximum = numbers[i];
+            }
+            if (numbers[i] < minimum)
+            {
+                minimum = numbers[i];
+            }
+        }
+        Debug.Log("Maximum: " + maximum);
+        Debug.Log("Minimum: " + minimum);
+
+        System.Array.Sort(numbers);
+        foreach (int n in numbers)
+        {
+            Debug.Log("Sorted: " + n);
+        }
+
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
